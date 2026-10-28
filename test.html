@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Académie Nasr – Journées de test</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="club"><i></i> Académie Nasr · Catégories 8 à 16 ans</div>
+    <h1>Viens passer le test.</h1>
+    <p>Une séance sur le terrain avec nos entraîneurs. Ton enfant joue, on l’observe, et on lui donne un retour écrit le jour même.</p>
+    <a class="btn" href="#inscription">Inscrire mon enfant</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Comment ça se passe</h2>
+    <p class="lead">Le test dure environ deux heures. Le droit d’inscription couvre le terrain, l’encadrement et le bilan.</p>
+    <ol class="steps">
+      <li><h3>Tu t’inscris</h3><p>Remplis le formulaire et choisis une date. Tu reçois un numéro de réservation.</p></li>
+      <li><h3>Tu paies</h3><p>Sur place le jour du test, ou par virement avant la séance.</p></li>
+      <li><h3>Tu joues</h3><p>Échauffement, exercices techniques, puis petit match. Apporte des chaussures et une bouteille d’eau.</p></li>
+      <li><h3>Tu reçois ton bilan</h3><p>Points forts, points à travailler et décision d’admission, remis par l’entraîneur.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Prochaines dates</h2>
+    <p class="lead">Les places sont limitées à 30 joueurs par séance pour que chacun soit bien observé.</p>
+    <div class="sessions" id="sessions"></div>
+  </div>
+</section>
+
+<section id="inscription">
+  <div class="wrap">
+    <h2>Inscription au test</h2>
+    <p class="lead">Un seul formulaire par enfant. Tous les champs sont obligatoires.</p>
+
+    <form class="formbox" id="form" novalidate>
+      <div class="row">
+        <div><label for="prenom">Prénom de l’enfant</label><input id="prenom" required placeholder=" " autocomplete="given-name"><p class="err" data-for="prenom"></p></div>
+        <div><label for="nom">Nom</label><input id="nom" required placeholder=" " autocomplete="family-name"><p class="err" data-for="nom"></p></div>
+      </div>
+      <div class="row">
+        <div><label for="naiss">Date de naissance</label><input id="naiss" type="date" required><p class="err" data-for="naiss"></p></div>
+        <div><label for="poste">Poste préféré</label>
+          <select id="poste"><option>Gardien</option><option>Défenseur</option><option selected>Milieu</option><option>Attaquant</option><option>Je ne sais pas</option></select></div>
+      </div>
+      <div class="row">
+        <div><label for="parent">Nom du parent</label><input id="parent" required placeholder=" " autocomplete="name"><p class="err" data-for="parent"></p></div>
+        <div><label for="tel">Téléphone (WhatsApp)</label><input id="tel" type="tel" required placeholder="06 12 34 56 78" autocomplete="tel"><p class="err" data-for="tel"></p></div>
+      </div>
+      <label for="date">Séance choisie</label>
+      <select id="date" required></select>
+
+      <fieldset>
+        <legend>Mode de paiement</legend>
+        <label class="pay"><input type="radio" name="pay" value="Sur place" checked><span>Sur place, en espèces<small>Le jour du test, à l’accueil.</small></span></label>
+        <label class="pay"><input type="radio" name="pay" value="Virement"><span>Virement bancaire<small>Le RIB t’est envoyé par WhatsApp après l’inscription.</small></span></label>
+      </fieldset>
+
+      <div class="total"><span>Droit de test</span><span>100 DH</span></div>
+      <button class="btn" type="submit">Réserver la place</button>
+    </form>
+
+    <div class="ok" id="ok" role="status" tabindex="-1">
+      <h3>Place réservée</h3>
+      <p id="okmsg"></p>
+      <div class="ref" id="ref"></div>
+      <p>Garde ce numéro. Présente-le à l’accueil le jour du test.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Académie Nasr · Stade municipal · Contact : 06 00 00 00 00 · contact@academie-nasr.example</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
