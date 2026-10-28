@@ -1,7 +1,7 @@
 // ---- Séances (modifie les dates ici) ----
 const SESSIONS = [
   { id: "s1", label: "Samedi 15 novembre",   time: "10h00 – 12h00", cat: "8 à 12 ans",         taken: 21 },
-  { id: "s2", label: "Dimanche 16 novembre", time: "10h00 – 12h00", cat: "13 à 16 ans",        taken: 27 },
+  { id: "s2", label: "Dimanche 16 novembre", time: "10h00 – 12h00", cat: "13 à 21 ans",        taken: 27 },
   { id: "s3", label: "Samedi 22 novembre",   time: "15h00 – 17h00", cat: "Toutes catégories",  taken: 9 }
 ];
 const CAP = 30; // places max par séance
@@ -61,7 +61,7 @@ function validate() {
     msg = "Choisis la date de naissance.";
   } else {
     const age = (Date.now() - new Date(dn)) / 31557600000;
-    if (age < 8 || age > 17) msg = "Le test est ouvert aux enfants de 8 à 16 ans.";
+    if (age < 8 || age >= 22) msg = "Le test est ouvert aux joueurs de 8 à 21 ans.";
   }
   ok = setErr("naiss", msg) && ok;
 
