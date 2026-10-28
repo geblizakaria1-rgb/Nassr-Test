@@ -82,7 +82,7 @@ $("form").addEventListener("submit", e => {
 
   $("okmsg").textContent =
     `${$("prenom").value.trim()} est inscrit(e) à la séance du ${s.label.toLowerCase()}, ${s.time}. ` +
-    `Paiement : ${pay.toLowerCase()}, 100 DH.`;
+    `Paiement : ${pay.toLowerCase()}, 300 DH.`;
   $("ref").textContent = ref;
 
   $("form").style.display = "none";
