@@ -1,12 +1,12 @@
 :root{
-  --pitch:#0e3b2c; --pitch2:#145040; --chalk:#f4f6f1; --ink:#13201a; --line:#f2c230;
-  --mute:#5b6b62; --card:#ffffff; --err:#b3261e; --bd:#d8dfd6;
+  --pitch:#10294f; --pitch2:#1f4a8f; --chalk:#f2f5fa; --ink:#121b2e; --line:#f2c230;
+  --mute:#58667f; --card:#ffffff; --err:#b3261e; --bd:#d6deec;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root{--chalk:#0b1511;--ink:#eaf1ec;--card:#13221b;--mute:#9db1a6;--bd:#27402f;--err:#ff8a80;}
+  :root{--chalk:#0a1220;--ink:#e8eefb;--card:#121d33;--mute:#9fb0cc;--bd:#24334f;--err:#ff8a80;}
   .steps li{border-color:var(--line)}
   .steps li::before{color:var(--line)}
 }
@@ -26,7 +26,7 @@ a{color:inherit}
 .club{font-weight:700;margin-bottom:28px;display:flex;align-items:center;gap:10px}
 .club i{width:14px;height:14px;background:var(--line);border-radius:50%;display:inline-block}
 h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:14ch}
-.hero p{max-width:46ch;font-size:1.15rem;margin:20px 0 32px;color:#dbe9e1}
+.hero p{max-width:46ch;font-size:1.15rem;margin:20px 0 32px;color:#d6e2f5}
 
 /* ===== Boutons ===== */
 .btn{display:inline-block;background:var(--line);color:#1a1a0a;font:700 1.05rem "Nunito Sans",sans-serif;border:0;border-radius:999px;padding:14px 28px;cursor:pointer;text-decoration:none}
@@ -76,6 +76,6 @@ legend{font-weight:700;margin-bottom:6px;font-size:.95rem}
 .ref{font:800 1.8rem "Bricolage Grotesque",sans-serif;color:var(--line);letter-spacing:.04em}
 
 /* ===== Footer ===== */
-footer{background:var(--pitch);color:#cfe0d6;padding:32px 0;font-size:.95rem}
+footer{background:var(--pitch);color:#cbd8ee;padding:32px 0;font-size:.95rem}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
